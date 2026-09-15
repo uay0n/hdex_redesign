@@ -32,16 +32,93 @@ main .hero .folder {
     clip-path: path('M1818 826C1818 842.569 1804.57 856 1788 856H30C13.4315 856 0 842.569 0 826V93.4072C0 76.8387 13.4315 63.4072 30 63.4072H1432.89C1445.96 63.4072 1457.52 54.956 1461.48 42.51L1468.36 20.8972C1472.33 8.45127 1483.89 0 1496.95 0H1788C1804.57 0 1818 13.4315 1818 30V826Z');
     margin: 0 auto; transform: translateY(-95px); 
 }
-main .hero .folder .folder_tab {}
-main .hero .folder .folder_tab .util {}
-main .hero .folder .folder_tab .util li {}
-main .hero .folder .folder_tab .util .lang {}
+main .hero .folder .folder_tab {
+    position: absolute;
+    top: 10px; right: 23px;
+}
+main .hero .folder .folder_tab .util {
+    display: flex; gap: 20px;
+}
+main .hero .folder .folder_tab .util li {
+    background: #fff; padding: 2px; border-radius: 50px;
+    width: 40px; height: 40px;
+    display: flex; box-shadow: 0 0 20px rgba(215, 255, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+main .hero .folder .folder_tab .util .lang {
+    width: 70px; height: 40px; background-color: #D7FF00;
+    justify-content: flex-start; 
+    padding-left: 6px;
+    box-sizing: border-box;
+}
+main .hero .folder .folder_tab .util .lang button {
+    background-color: #fff; width: 30px; height: 30px;
+    border-radius: 50px; font-weight: 700; font-size: 0.938em;
+    letter-spacing: -1px;
+}
 main .hero .folder .folder_body {}
-main .hero .folder .folder_body .hero_main {}
-main .hero .folder .folder_body .hero_main h2 {}
-main .hero .folder .folder_body .hero_main p {}
-main .hero .folder .folder_body .btn_num {}
-main .hero .folder .folder_body .btn_num a {}
-main .hero .folder .folder_body .btn_num a span {}
-main .hero .folder .folder_body .btn_num p {}
-main .hero .folder .folder_body .btn_num p span {}
+main .hero .folder .folder_body .hero_main {
+    text-align: center; position: absolute; top:50%; left:50%;
+    transform:translate(-50%, -50%);
+}
+main .hero .folder .folder_body .hero_main h2 {
+    color: #D7FF00; font-family: 'Bitter'; font-weight: 900;
+    font-size: 6.25em; letter-spacing: 3px; padding-bottom: 15px;
+}
+main .hero .folder .folder_body .hero_main p {
+    color: #fff; font-family: 'Bitter'; letter-spacing: -2px;
+    font-size: 2.5em; font-weight: 500;
+}
+main .hero .folder .folder_body .btn_num {
+    position: absolute; top:80%; left:50%;
+    transform:translate(-50%, -50%); text-align: center;
+}
+main .hero .folder .folder_body .btn_num a {
+    display: flex; flex-flow: row nowrap; justify-content: center; align-items: center;
+    gap: 3px; padding: 10px 20px; border-radius: 50px; overflow: hidden; margin-bottom: 20px;
+    background: linear-gradient(
+        to bottom, 
+        rgba(255, 255, 255, 0.18) 0%, 
+        rgba(255, 255, 255, 0.10) 50%, 
+        rgba(255, 255, 255, 0.07) 100%
+    );
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border:linear-gradient(
+        to bottom, 
+        rgba(255, 255, 255, 0.18) 0%, 
+        rgba(255, 255, 255, 0.10) 50%, 
+        rgba(255, 255, 255, 0.07) 100%
+    );
+    box-shadow: 
+        /* 1. 첫 번째 바깥쪽 그림자 */
+        0 8px 24px rgba(0, 0, 0, 0.15),
+        
+        /* 2. 두 번째 바깥쪽 그림자 */
+        0 4px 4px rgba(0, 0, 0, 0.10),
+        
+        /* 3. 첫 번째 안쪽 그림자 */
+        inset 0 1px 2px rgba(255, 255, 255, 0.55),
+        
+        /* 4. 두 번째 안쪽 그림자 */
+        inset 0 -1px 3px rgba(0, 0, 0, 0.10);
+}
+main .hero .folder .folder_body .btn_num a span {
+    font-family: 'Roboto Condensed'; font-weight: 500;
+    font-size: 1.25em; color: #fff; letter-spacing: 2px;
+}
+main .hero .folder .folder_body .btn_num p {
+    font-family: 'Roboto Condensed'; font-weight: 400;
+    color: #fff; font-size: 1.25em;
+}
+main .hero .folder .folder_body .btn_num p span {
+    font-family: 'Roboto Condensed'; font-weight: 400;
+    color: #fff;
+}
+/* cta(top버튼) */
+.top_btn {
+    position: fixed; background-color: rgba(215,255,0,0.6);
+    bottom: 30px; right: 50px; color: #242424;
+    font-size: 0.938em; padding: 10px 5px; border-radius: 100px;
+}
