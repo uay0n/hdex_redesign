@@ -1,0 +1,47 @@
+/* hdex_index_css */
+header {
+    position: relative;
+}
+header nav {
+    display: flex; padding: 20px 50px;
+}
+header nav h1 {}
+header nav .gnb {
+    display: flex; gap: 50px;
+    position: absolute; top:50%; left:50%;
+    transform:translate(-50%, -50%);
+}
+header nav .gnb li {}
+header nav .gnb li a {
+    font-weight: 700; font-size: 0.938em;
+}
+/* ---------------------------------main 시작----------------------------- */
+main {}
+main .hero {
+    display: flex;
+    justify-content: center; 
+    align-items: center;  
+    width: 100%;
+    min-height: 100vh;
+}
+main .hero .folder {
+    background: url(../image/hero_big_1.png) center / cover no-repeat;
+    background-position: center -15px;
+    width: 100%; max-width: 1818px;
+    height: 856px; position: relative;
+    clip-path: path('M1818 826C1818 842.569 1804.57 856 1788 856H30C13.4315 856 0 842.569 0 826V93.4072C0 76.8387 13.4315 63.4072 30 63.4072H1432.89C1445.96 63.4072 1457.52 54.956 1461.48 42.51L1468.36 20.8972C1472.33 8.45127 1483.89 0 1496.95 0H1788C1804.57 0 1818 13.4315 1818 30V826Z');
+    margin: 0 auto; transform: translateY(-95px); 
+}
+main .hero .folder .folder_tab {}
+main .hero .folder .folder_tab .util {}
+main .hero .folder .folder_tab .util li {}
+main .hero .folder .folder_tab .util .lang {}
+main .hero .folder .folder_body {}
+main .hero .folder .folder_body .hero_main {}
+main .hero .folder .folder_body .hero_main h2 {}
+main .hero .folder .folder_body .hero_main p {}
+main .hero .folder .folder_body .btn_num {}
+main .hero .folder .folder_body .btn_num a {}
+main .hero .folder .folder_body .btn_num a span {}
+main .hero .folder .folder_body .btn_num p {}
+main .hero .folder .folder_body .btn_num p span {}
