@@ -1,19 +1,18 @@
 /* hdex_index_css */
 header {
-position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 9999;
+    position: fixed;
+    top: 0; left: 0;
+    width: 1391px; 
+    z-index: 800; 
 }
 header nav {
     display: flex; padding: 20px 50px;
+    justify-content: space-between;
+    align-items: center;
 }
 header nav h1 {}
 header nav .gnb {
-    display: flex; gap: 50px;
-    position: absolute; top:50%; left:50%;
-    transform:translate(-50%, -50%);
+    display: flex; gap: 50px; 
 }
 header nav .gnb li {}
 header nav .gnb li a {
@@ -21,6 +20,7 @@ header nav .gnb li a {
 }
 /* ---------------------------------main 시작----------------------------- */
 main {}
+/* ---------------------------------hero 시작----------------------------- */
 main .hero {
     display: flex;
     justify-content: center; 
@@ -41,7 +41,7 @@ main .hero .folder .folder_tab {
     top: 10px; right: 23px;
 }
 main .hero .folder .folder_tab .util {
-    display: flex; gap: 20px;
+    display: flex; gap: 20px; position: relative; z-index: 9999;
 }
 main .hero .folder .folder_tab .util li {
     background: #fff; padding: 2px; border-radius: 50px;
@@ -162,6 +162,35 @@ main .hero .rank_modal table * {
     color: #242424; font-size: 0.9em;
     text-align: center;
 }
+/* ---------------------------------best 시작----------------------------- */
+main .best {
+    width: 100%; min-height:100vh;
+}
+main .best h2 {
+    font-family: 'Bitter'; font-weight: 900;
+    padding: 40px 0 ; border-top: 1px solid #242424; border-bottom: 1px solid #242424;
+    text-align: center; font-size: 1.875em;
+}
+main .best ul {
+    background: #000; height: 72.64px;
+    display: flex; justify-content: center; align-items: center;
+    gap: 100px;
+}
+main .best ul li {}
+main .best ul .active a {
+    color: #D7FF00; font-weight: 700;
+    border-bottom: 2px solid #D7FF00;
+}
+main .best ul li a {
+    color: #fff;
+}
+main .best .best_inner {}
+main .best .best_inner .best_main  {}
+main .best .best_inner .best_item {}
+main .best .best_inner .best_item .item {}
+main .best .best_inner .best_item .item .num {}
+main .best .best_inner .best_item .item .name {}
+main .best .best_inner .best_item .item .item {}
 /* cta(top버튼) */
 .top_btn {
     position: fixed; background-color: rgba(215,255,0,0.6);
