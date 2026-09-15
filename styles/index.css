@@ -1,6 +1,10 @@
 /* hdex_index_css */
 header {
-    position: relative;
+position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
 }
 header nav {
     display: flex; padding: 20px 50px;
@@ -22,7 +26,7 @@ main .hero {
     justify-content: center; 
     align-items: center;  
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
 }
 main .hero .folder {
     background: url(../image/hero_big_1.png) center / cover no-repeat;
@@ -30,7 +34,7 @@ main .hero .folder {
     width: 100%; max-width: 1818px;
     height: 856px; position: relative;
     clip-path: path('M1818 826C1818 842.569 1804.57 856 1788 856H30C13.4315 856 0 842.569 0 826V93.4072C0 76.8387 13.4315 63.4072 30 63.4072H1432.89C1445.96 63.4072 1457.52 54.956 1461.48 42.51L1468.36 20.8972C1472.33 8.45127 1483.89 0 1496.95 0H1788C1804.57 0 1818 13.4315 1818 30V826Z');
-    margin: 0 auto; transform: translateY(-95px); 
+    margin: 0 auto; transform: translateY(-20px); 
 }
 main .hero .folder .folder_tab {
     position: absolute;
@@ -115,6 +119,48 @@ main .hero .folder .folder_body .btn_num p {
 main .hero .folder .folder_body .btn_num p span {
     font-family: 'Roboto Condensed'; font-weight: 400;
     color: #fff;
+}
+main .hero .rank_modal {
+    position: absolute; top: 90px; right: 85px;
+    display: none;
+}
+main .hero .rank_modal.active {
+    display: block;
+}
+main .hero .rank_modal table {
+    width: 365px; border-radius: 20px; overflow: hidden;
+    table-layout: fixed;
+}
+main .hero .rank_modal table tr {
+    border-bottom: 0.5px solid #e6e6e6;
+}
+main .hero .rank_modal table th {
+    background-color: #D7FF00;
+    font-weight: 900;
+}
+main .hero .rank_modal table td {
+    background-color: #fff;
+    font-weight: 800;
+}
+main .hero .rank_modal th:nth-child(1),
+main .hero .rank_modal td:nth-child(1) {
+    width: 51px; height: 40px;
+}
+main .hero .rank_modal th:nth-child(2),
+main .hero .rank_modal td:nth-child(2) {
+    width: 258px;
+}
+main .hero .rank_modal td:nth-child(2),
+main .hero .rank_modal td:nth-child(3) {
+    font-weight: 600;
+}
+main .hero .rank_modal th:nth-child(3),
+main .hero .rank_modal td:nth-child(3) {
+    width: 53px;
+}
+main .hero .rank_modal table * {
+    color: #242424; font-size: 0.9em;
+    text-align: center;
 }
 /* cta(top버튼) */
 .top_btn {
