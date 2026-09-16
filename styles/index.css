@@ -364,7 +364,7 @@ main .new ul .forth {
 /* ---------------------------------new 끝----------------------------- */
 /* ---------------------------------lab 시작----------------------------- */
 main .lab {
-    height: max-content; width: 100%;
+    width: 100%;
 }
 main .lab h2 {
     font-family: 'Bitter'; font-weight: 900;
@@ -379,13 +379,13 @@ main .lab h2 span {
     font-size: 12px;  font-weight: 400;
 }
 main .lab ul { 
-    width: 100%; 
+    width: 100%; height: 600px;
     display: grid; background-color: #F8F8F8;
     grid-template-columns: repeat(3, 1fr);
     border-bottom: 1px solid #242424;
 }
 main .lab ul li {
-    height: 750px;
+    
 }
 main .lab ul li .title {
     background: #D7FF00; padding: 10px 0;
@@ -395,7 +395,7 @@ main .lab ul li .title {
 main .lab ul li .info {
     display: flex; flex-flow: column;
     justify-content: center; align-items: center;
-    height: 90%; gap: 10px;
+    gap: 10px; height: 562px;
     opacity: 1;
     visibility: visible;
     transition: opacity 0.3s ease;
