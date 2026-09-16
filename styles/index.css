@@ -415,20 +415,20 @@ main .lab ul li .info .desc {
 }
 main .lab ul .fab {
     background: url(../image/lab_1.jpg) center / 80% no-repeat;
-    border-right: 1px solid #242424; transition: background ;
+    border-right: 1px solid #242424; transition: background 0.2s ease;
 }
 main .lab ul li.fab:hover {
     background: url(../image/lab_h_1.jpg) center / cover no-repeat;
 }
 main .lab ul .fun {
     background: url(../image/lab_2.jpg) center / 80% no-repeat;
-    border-right: 1px solid #242424; transition: background;
+    border-right: 1px solid #242424; transition: background 0.2s ease;
 }
 main .lab ul li.fun:hover {
     background: url(../image/lab_h_2.jpg) center / cover no-repeat;
 }
 main .lab ul .fit {
-    background: url(../image/lab_3.jpg) center / 80% no-repeat; transition: background ;
+    background: url(../image/lab_3.jpg) center / 80% no-repeat; transition: background 0.2s ease; ;
 }
 main .lab ul li.fit:hover {
     background: url(../image/lab_h_3.jpg) center / cover no-repeat;
