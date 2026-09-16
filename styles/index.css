@@ -291,6 +291,13 @@ main .banner ul li .content {
     color: #fff; font-size: 0.938em;
     font-weight: 300;
 }
+main .banner ul li:hover {
+    background: #D7FF00;
+}
+main .banner ul li:hover .title,
+main .banner ul li:hover .content {
+    color:#242424
+}
 main .banner:has(ul li:nth-child(1):hover) {
     background: url(../image/bnr_1.jpg) center / cover no-repeat;
 }
@@ -396,13 +403,6 @@ main .lab ul li .info {
     display: flex; flex-flow: column;
     justify-content: center; align-items: center;
     gap: 10px; height: 562px;
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 0.3s ease;
-}
-main .lab ul li:hover .info {
-    opacity: 0;
-    visibility: hidden;
 }
 main .lab ul li .info .quality {
     font-family: 'Roboto Condensed'; font-size: 2.5em;
@@ -415,23 +415,35 @@ main .lab ul li .info .desc {
 }
 main .lab ul .fab {
     background: url(../image/lab_1.jpg) center / 80% no-repeat;
-    border-right: 1px solid #242424; transition: background 0.2s ease;
+    border-right: 1px solid #242424; transition: background ;
 }
-main .lab ul li.fab:hover {
+main .lab ul .fab:hover {
     background: url(../image/lab_h_1.jpg) center / cover no-repeat;
 }
 main .lab ul .fun {
     background: url(../image/lab_2.jpg) center / 80% no-repeat;
-    border-right: 1px solid #242424; transition: background 0.2s ease;
+    border-right: 1px solid #242424; transition: background ;
 }
-main .lab ul li.fun:hover {
+main .lab ul .fun:hover {
     background: url(../image/lab_h_2.jpg) center / cover no-repeat;
 }
 main .lab ul .fit {
-    background: url(../image/lab_3.jpg) center / 80% no-repeat; transition: background 0.2s ease; ;
+    background: url(../image/lab_3.jpg) center / 80% no-repeat; transition: background ;
 }
-main .lab ul li.fit:hover {
+main .lab ul .fit:hover {
     background: url(../image/lab_h_3.jpg) center / cover no-repeat;
+}
+main .lab ul .fab:hover .quality,
+main .lab ul .fab:hover .desc {
+    opacity: 0;
+}
+main .lab ul .fun:hover .quality,
+main .lab ul .fun:hover .desc {
+    opacity: 0;
+}
+main .lab ul .fit:hover .quality,
+main .lab ul .fit:hover .desc {
+    opacity: 0;
 }
 /* ---------------------------------lab 끝----------------------------- */
 /* cta(top버튼) */
