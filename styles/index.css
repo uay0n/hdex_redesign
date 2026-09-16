@@ -1,6 +1,6 @@
 /* hdex_index_css */
 header {
-    position: fixed;
+    position: absolute;
     top: 0; left: 0;
     width: 1391px; 
     z-index: 800; 
@@ -34,7 +34,7 @@ main .hero .folder {
     width: 100%; max-width: 1818px;
     height: 856px; position: relative;
     clip-path: path('M1818 826C1818 842.569 1804.57 856 1788 856H30C13.4315 856 0 842.569 0 826V93.4072C0 76.8387 13.4315 63.4072 30 63.4072H1432.89C1445.96 63.4072 1457.52 54.956 1461.48 42.51L1468.36 20.8972C1472.33 8.45127 1483.89 0 1496.95 0H1788C1804.57 0 1818 13.4315 1818 30V826Z');
-    margin: 0 auto; transform: translateY(-20px); 
+    margin: 0 auto; transform: translateY(-10px); 
 }
 main .hero .folder .folder_tab {
     position: absolute;
@@ -164,7 +164,7 @@ main .hero .rank_modal table * {
 }
 /* ---------------------------------best 시작----------------------------- */
 main .best {
-    width: 100%; min-height:100vh;
+    width: 100%; height:100vh;
 }
 main .best h2 {
     font-family: 'Bitter'; font-weight: 900;
@@ -184,13 +184,257 @@ main .best ul .active a {
 main .best ul li a {
     color: #fff;
 }
-main .best .best_inner {}
-main .best .best_inner .best_main  {}
-main .best .best_inner .best_item {}
-main .best .best_inner .best_item .item {}
-main .best .best_inner .best_item .item .num {}
-main .best .best_inner .best_item .item .name {}
-main .best .best_inner .best_item .item .item {}
+main .best .best_inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 1:1 비율로 꽉 채우기 */
+    width: 100%; 
+    margin: 0;
+    gap: 0; min-height: 725px;
+}
+main .best .best_inner .best_main  {
+    background: url(../image/best_big.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 30px; gap: 5px;
+    border-bottom: 1px solid #242424;
+    border-right: 1px solid #242424;
+}
+main .best .best_inner .best_main .num {
+    font-family: 'Bitter'; font-size: 4.375em;
+    color: #D7FF00; font-weight: 700;
+}
+main .best .best_inner .best_main .name {
+    font-size: 1em; font-weight: 600;
+}
+main .best .best_inner .best_main .col_pri {
+    font-size: 0.875em; color: #777777;
+}
+main .best .best_inner .best_item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 동일한 크기의 열(Column) 2개를 균등하게 배치 */
+    width: 100%;
+}
+main .best .best_inner .best_item .item {
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+}
+main .best .best_inner .best_item .item .info {
+    background: rgba(255,255,255,0.8); width: 100%;
+    padding: 20px; display: flex;
+    flex-direction: column;
+    justify-content: flex-end; gap: 5px;
+}
+main .best .best_inner .best_item .item .info .num {
+    font-family: 'Bitter'; font-size: 1.25em;
+    line-height: 1.0; font-weight: 700;
+}
+main .best .best_inner .best_item .item .info .name {
+    font-size: 1em; font-weight: 600;
+}
+main .best .best_inner .best_item .item .info .col_pri {
+    font-weight: 500; font-size: 0.875em;
+    color: #777777;
+}
+main .best .best_inner .top_f {
+    background: url(../image/best_1.jpg);
+    border-bottom: 1px solid #242424;
+    border-right: 1px solid #242424;
+}
+main .best .best_inner .top_s {
+    background: url(../image/best_2.jpg);
+    border-bottom: 1px solid #242424;
+}
+main .best .best_inner .bottom_f {
+    background: url(../image/best_3.jpg);
+    border-bottom: 1px solid #242424;
+    border-right: 1px solid #242424;
+}
+main .best .best_inner .bottom_s {
+    background: url(../image/best_4.jpg);
+    border-bottom: 1px solid #242424;
+}
+/* ---------------------------------banner 시작----------------------------- */
+main .banner {
+    width: 100%; height:100vh;
+    background: url(../image/banner_big.png)center / cover no-repeat;
+    transition: background-image 0.4s ease;
+}
+main .banner .container {
+    display: flex; flex-flow: column; justify-content: center; align-items: center;
+    width: 100%; height:100vh; gap: 50px;
+}
+main .banner h2 {
+    font-weight: 700; font-size: 3.125em;
+    text-align: center; color: #FFFFFF;
+}
+main .banner ul {
+    display: flex; flex-flow: row; gap: 50px;
+}
+main .banner ul li {
+    display: flex; flex-flow: column; justify-content: center; align-items: center;
+    width: 200px; height: 200px; gap: 5px;
+    background:  rgba(255,255,255,0.2); backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px); box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.2);
+    border-radius: 100px; overflow: hidden; 
+}
+main .banner ul li .title {
+    color: #fff; font-size: 0.938em;
+    font-weight: 700;
+}
+main .banner ul li .content {
+    color: #fff; font-size: 0.938em;
+    font-weight: 300;
+}
+main .banner:has(ul li:nth-child(1):hover) {
+    background: url(../image/bnr_1.jpg) center / cover no-repeat;
+}
+main .banner:has(ul li:nth-child(2):hover) {
+    background: url(../image/bnr_2.jpg) center / cover no-repeat;
+}
+main .banner:has(ul li:nth-child(3):hover) {
+    background: url(../image/bnr_3.jpg) center / cover no-repeat;
+}
+main .banner .small_title {
+    text-align: center; line-height: 1.0;
+    font-size: 1.25em; color: #FFFFFF;
+}
+/* ---------------------------------banner 끝----------------------------- */
+/* ---------------------------------new 시작----------------------------- */
+main .new {width: 100%; min-height:100vh;}
+main .new h2 {
+    font-family: 'Bitter'; font-weight: 900;
+    padding: 40px 0 ; border-top: 1px solid #242424; border-bottom: 1px solid #242424;
+    text-align: center; font-size: 1.875em;
+}
+main .new .new_btn {
+    width: 100%; padding: 10px 40px;
+    border-bottom: 1px solid #242424;
+    display: flex; justify-content: flex-end; gap: 10px;
+}
+main .new .new_btn .left_btn {}
+main .new .new_btn .left_btn img {}
+main .new .new_btn .right_btn {}
+main .new .new_btn .right_btn img {}
+main .new ul {
+    width: 100%;
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr);
+    border-bottom: 1px solid #242424;
+}
+main .new ul li {
+    height: 755px; display: flex; flex-flow: column;
+    justify-content: flex-end; text-align: center; 
+}
+main .new ul li .info {
+    background-color: #fff;flex-flow: column;
+    padding: 20px; display: flex; gap: 5px;
+}
+main .new ul li .info .name {
+    font-weight: 600; font-size: 0.938em;
+}
+main .new ul li .info .name span {
+    margin-right: 5px; font-size: 0.75em;
+    background: #D7FF00; padding: 0 5px;
+}
+main .new ul li .info .col_pri {
+    font-weight: 500; font-size: 0.875em;
+    color: #777777;
+}
+main .new ul .first {
+    background: url(../image/new_1.jpg)center / cover no-repeat;
+    border-right: 1px solid #242424;
+}
+main .new ul .second {
+    background: url(../image/new_2.jpg)center / cover no-repeat; 
+    border-right: 1px solid #242424;
+}
+main .new ul .third {
+    background: url(../image/new_3.jpg)center / cover no-repeat;
+    border-right: 1px solid #242424;
+}
+main .new ul .forth {
+    background: url(../image/new_4.jpg)center / cover no-repeat;
+}
+/* ---------------------------------new 끝----------------------------- */
+/* ---------------------------------lab 시작----------------------------- */
+main .lab {
+    height: max-content; width: 100%;
+}
+main .lab h2 {
+    font-family: 'Bitter'; font-weight: 900;
+    padding: 40px 0 ; border-bottom: 1px solid #242424;
+    text-align: center; font-size: 1.875em;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 0px;
+}
+main .lab h2 span {
+    font-size: 12px;  font-weight: 400;
+}
+main .lab ul { 
+    width: 100%; 
+    display: grid; background-color: #F8F8F8;
+    grid-template-columns: repeat(3, 1fr);
+    border-bottom: 1px solid #242424;
+}
+main .lab ul li {
+    height: 750px;
+}
+main .lab ul li .title {
+    background: #D7FF00; padding: 10px 0;
+    text-align: center; font-family: 'Roboto Condensed';
+    font-weight: 600; border-bottom: 1px solid #242424;
+}
+main .lab ul li .info {
+    display: flex; flex-flow: column;
+    justify-content: center; align-items: center;
+    height: 90%; gap: 10px;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease;
+}
+main .lab ul li:hover .info {
+    opacity: 0;
+    visibility: hidden;
+}
+main .lab ul li .info .quality {
+    font-family: 'Roboto Condensed'; font-size: 2.5em;
+    font-weight: 900; font-style: italic; color: #D7FF00;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+main .lab ul li .info .desc {
+    color: #fff; font-weight: 300;
+    text-align: center;
+}
+main .lab ul .fab {
+    background: url(../image/lab_1.jpg) center / 80% no-repeat;
+    border-right: 1px solid #242424; transition: background ;
+}
+main .lab ul li.fab:hover {
+    background: url(../image/lab_h_1.jpg) center / cover no-repeat;
+}
+main .lab ul .fun {
+    background: url(../image/lab_2.jpg) center / 80% no-repeat;
+    border-right: 1px solid #242424; transition: background;
+}
+main .lab ul li.fun:hover {
+    background: url(../image/lab_h_2.jpg) center / cover no-repeat;
+}
+main .lab ul .fit {
+    background: url(../image/lab_3.jpg) center / 80% no-repeat; transition: background ;
+}
+main .lab ul li.fit:hover {
+    background: url(../image/lab_h_3.jpg) center / cover no-repeat;
+}
+/* ---------------------------------lab 끝----------------------------- */
+/* cta(top버튼) */
 /* cta(top버튼) */
 .top_btn {
     position: fixed; background-color: rgba(215,255,0,0.6);
