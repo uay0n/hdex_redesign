@@ -383,7 +383,7 @@ main .lab h2 {
     display: flex;
     flex-direction: column;
     align-items: center; 
-    gap: 0px;
+    gap: 5px;
 }
 main .lab h2 span {
     font-size: 12px;  font-weight: 400;
@@ -497,6 +497,140 @@ main .banner_two .container .photo a .img3 {
     background: url(../image/bnr2_3.jpg) center / cover no-repeat;
 }
 /* ---------------------------------banner_two 끝----------------------------- */
+/* ---------------------------------kind 시작----------------------------- */
+main .kind {}
+main .kind h2 {
+    font-family: 'Bitter'; font-weight: 900;
+    padding: 40px 0 ; border-bottom: 1px solid #242424;
+    text-align: center; font-size: 1.875em;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 5px; background: #D7FF00;
+}
+main .kind h2 span {font-size: 12px;  font-weight: 400;}
+main .kind ul {
+    width: 100%; height: 560px;
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr);
+    border-bottom: 1px solid #242424;
+}
+main .kind ul li {
+    position: relative; 
+    padding: 40px; 
+}
+main .kind ul li::after {
+    content: ""; position: absolute;
+    width: 100%; height: 100%;
+    top: 0; left: 0;
+    background: rgba(255, 255,255,0.85);
+    z-index: 1;
+}
+main .kind ul li a {
+    position: relative; z-index: 2;
+    width: 100%; height: 100%;
+    display: flex; flex-flow: column;
+    justify-content: flex-end;
+}
+main .kind ul li .num {
+    position: absolute;
+    font-family: 'Bebas Neue'; font-size: 15.625em;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+}
+main .kind ul li .bottom {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+main .kind ul li .bottom .arrow {}
+main .kind ul li .bottom .arrow img {
+    
+}
+main .kind ul li .bottom .left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+main .kind ul li .bottom .left .type {
+    padding: 5px 10px; border-radius: 50px; border: 1px solid #242424;
+    display: inline-block; font-weight: 700;
+}
+main .kind ul li .bottom .left .advice {
+
+}
+main .kind ul .str {
+    background: url(../image/kind_1.jpg) center / cover no-repeat;
+    border-right: 1px solid #242424;
+}
+main .kind ul .fun {
+    background: url(../image/kind_2.jpg) center / cover no-repeat;
+    border-right: 1px solid #242424;
+}
+main .kind ul .pila {
+    background: url(../image/kind_3.jpg) center / cover no-repeat;
+    border-right: 1px solid #242424;
+}
+main .kind ul .run {
+    background: url(../image/kind_4.jpg) center / cover no-repeat;
+    border-right: 1px solid #242424;
+}
+main .kind ul li:hover::after {
+    background: none;
+}
+main .kind ul li:hover .num {
+    color: #fff;
+}
+main .kind ul li:hover .bottom * {
+    color: #fff; 
+}
+main .kind ul li:hover .bottom .left .type {
+    border: 1px solid #fff;
+}
+main .kind ul li:hover .arrow img {
+    filter: invert(1);
+}
+/* ---------------------------------kind 끝----------------------------- */
+/* ---------------------------------footer 시작----------------------------- */
+footer {}
+footer .announ {
+    padding: 50px 100px; display:flex; flex-flow: column; gap: 30px;
+}
+footer .announ .top {}
+footer .announ .top .name {
+    font-size: 0.813em; letter-spacing: -0.02em;
+    font-weight: 600; padding-bottom: 20px;
+}
+footer .announ .top ul {
+    display: flex; gap: 10px; flex-flow: column;
+}
+footer .announ .top ul li {
+    font-size: 0.813em; letter-spacing: -0.02em;
+    font-weight: 600;
+}
+footer .announ .top ul li:nth-child(2){
+    color: #777777;
+}
+footer .announ .bottom {
+    display: flex; gap: 10px; flex-flow: column;
+}
+footer .announ .bottom li {
+    font-size: 0.813em; letter-spacing: -0.02em;
+    font-weight: 600; color: #777777;
+}
+footer .info {
+    padding: 10px 50px; background: #D7FF00;
+    display: flex; gap: 10px; justify-content: center; align-items: center;
+}
+footer .info p {
+    font-size: 0.813em; letter-spacing: -0.02em;
+    font-weight: 600;
+}
+footer .info .insta img {}
+footer .info .yout img {}
+/* ---------------------------------footer 끝----------------------------- */
 /* cta(top버튼) */
 .top_btn {
     position: fixed; background-color: rgba(215,255,0,0.6);
