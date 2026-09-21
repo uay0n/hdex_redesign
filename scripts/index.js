@@ -98,3 +98,21 @@ bestTab[1].addEventListener('click', function(e) {
     training.style.display = 'none';
     daily.style.display = 'grid';
 });
+
+//뉴부분 페이지 이동
+const newList = document.querySelector('.new ul');
+const leftBtn = document.querySelector('.left_btn');
+const rightBtn = document.querySelector('.right_btn');
+
+let currentPage = 0;
+
+rightBtn.addEventListener('click', () => {
+    currentPage = 1;
+    newList.style.transform = 'translateX(-50%)';
+});
+
+leftBtn.addEventListener('click', () => {
+    currentPage = 0;
+    newList.style.transform = 'translateX(0)';
+});
+
