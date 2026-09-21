@@ -248,8 +248,19 @@ main .best .best_inner {
     margin: 0;
     gap: 0; min-height: 725px;
 }
-main .best .best_inner .best_main  {
+main .best .training .best_main  {
     background: url(../image/best_big.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 30px; gap: 5px;
+    border-bottom: 1px solid #242424;
+    border-right: 1px solid #242424;
+}
+main .best .daily .best_main  {
+    background: url(../image/daily_big.jpg);
     background-size: cover;
     background-position: center;
     display: flex;
@@ -298,22 +309,43 @@ main .best .best_inner .best_item .item .info .col_pri {
     font-weight: 500; font-size: 0.875em;
     color: #777777;
 }
-main .best .best_inner .top_f {
+main .best .training .top_f {
     background: url(../image/best_1.jpg);
     border-bottom: 1px solid #242424;
     border-right: 1px solid #242424;
 }
-main .best .best_inner .top_s {
+main .best .training .top_s {
     background: url(../image/best_2.jpg);
     border-bottom: 1px solid #242424;
 }
-main .best .best_inner .bottom_f {
+main .best .training .bottom_f {
     background: url(../image/best_3.jpg);
     border-bottom: 1px solid #242424;
     border-right: 1px solid #242424;
 }
-main .best .best_inner .bottom_s {
+main .best .training .bottom_s {
     background: url(../image/best_4.jpg);
+    border-bottom: 1px solid #242424;
+}
+main .best .daily {
+    display: none;
+}
+main .best .daily .top_f {
+    background: url(../image/daily_1.jpg);
+    border-bottom: 1px solid #242424;
+    border-right: 1px solid #242424;
+}
+main .best .daily .top_s {
+    background: url(../image/daily_2.jpg);
+    border-bottom: 1px solid #242424;
+}
+main .best .daily .bottom_f {
+    background: url(../image/daily_3.jpg);
+    border-bottom: 1px solid #242424;
+    border-right: 1px solid #242424;
+}
+main .best .daily .bottom_s {
+    background: url(../image/daily_4.jpg);
     border-bottom: 1px solid #242424;
 }
 /* ---------------------------------banner 시작----------------------------- */

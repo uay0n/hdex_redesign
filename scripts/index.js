@@ -67,11 +67,34 @@ setInterval(() => {
 const header = document.querySelector('header');
 
 window.addEventListener('scroll', function() {
-
     if (window.scrollY > 300) {
         header.classList.add('scrolled');
     } else {
         header.classList.remove('scrolled');
     }
+});
 
+//베스트 메뉴 누르기
+const bestTab = document.querySelectorAll('.best > ul li');
+const training = document.querySelector('.best .training');
+const daily = document.querySelector('.best .daily');
+
+bestTab[0].addEventListener('click', function(e) {
+    e.preventDefault();
+
+    bestTab[0].classList.add('active');
+    bestTab[1].classList.remove('active');
+
+    training.style.display = 'grid';
+    daily.style.display = 'none';
+});
+
+bestTab[1].addEventListener('click', function(e) {
+    e.preventDefault();
+
+    bestTab[0].classList.remove('active');
+    bestTab[1].classList.add('active');
+
+    training.style.display = 'none';
+    daily.style.display = 'grid';
 });
