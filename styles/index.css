@@ -44,6 +44,10 @@ header nav .gnb {
 header nav .gnb li {}
 header nav .gnb li a {
     font-weight: 700; font-size: 0.938em;
+    padding: 10px 0;
+}
+header nav .scroll_util li a img {
+    padding: 10px 0;
 }
 /* ---------------------------------main 시작----------------------------- */
 main {}
@@ -763,4 +767,77 @@ footer .info .yout img {}
     position: fixed; background-color: rgba(215,255,0,0.6);
     bottom: 30px; right: 50px; color: #242424;
     font-size: 0.938em; padding: 10px 5px; border-radius: 100px;
+}
+
+@media screen and (max-width:1200px) {
+    header {width: 100%;}
+    header nav {
+        display: flex;
+        align-items: center;
+        padding: 10px 50px;
+    }
+    header nav .gnb {
+        position: static;
+        transform: none;
+        white-space: nowrap;
+    }
+    header nav .scroll_util {
+        position: static;
+        transform: none;
+        margin-left: 40px;
+        opacity: 1;
+        visibility: visible;
+    }
+    header nav h1 {filter: invert(1);}
+    header nav h1 a img {height: 25px; width: 100%;}
+    header nav .gnb li a {color: #fff; font-size: 0.852em;}
+    header nav .scroll_util a {filter: invert(1);}
+    header nav .gnb {
+        display: flex; gap: 40px; 
+    }
+    header.scrolled nav h1,
+    header.scrolled nav .scroll_util a {
+        filter: none;
+    }
+    header.scrolled .gnb a {
+        color: #000;
+    }
+    /* -------------------------------------------메인시작 */
+    main .hero {height: auto;}
+    main .hero .folder {
+        clip-path: none;
+        aspect-ratio: 1818 / 856;
+        height: 650px; transform: none;
+    }
+    main .hero .folder .folder_tab .util {display: none;}
+    main .hero .folder .folder_body .hero_main h2 {
+        font-size: 4.5em;
+        letter-spacing: 2px;
+        padding-bottom: 10px;
+    }
+    main .hero .folder .folder_body .hero_main p {
+        font-size: 1.5em;
+        letter-spacing: -1px;
+    }
+    main .hero .folder .folder_body .btn_num a span {
+        font-size: 1.0em;
+    }
+    /* ----------------------------------베스트 시작 */
+    main .best h2 {padding: 20px 0; font-size: 1.275em;}
+    main .best ul {
+        height: 50px;
+    }
+    main .best ul li a {font-size: 0.852em;}
+    main .best .best_inner {
+        min-height: 600px;
+    }
+    main .best .best_inner .best_item .item .info{
+        padding: 10px;
+    }
+    main .best .best_inner .best_item .item .info .num {
+        font-size: 0.875em;
+    }
+    main .best .best_inner .best_item .item .info .name {
+        font-size: 0.875em;
+    }
 }
