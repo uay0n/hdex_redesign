@@ -823,7 +823,7 @@ footer .info .yout img {}
         font-size: 1.0em;
     }
     /* ----------------------------------베스트 시작 */
-    main .best h2 {padding: 20px 0; font-size: 1.275em;}
+    main .best h2 {padding: 20px 0; font-size: 1.563em;}
     main .best ul {
         height: 50px;
     }
@@ -840,4 +840,47 @@ footer .info .yout img {}
     main .best .best_inner .best_item .item .info .name {
         font-size: 0.875em;
     }
+    /* 배너1 시작 */
+    main .banner .container {
+        height: 700px; gap: 40px;
+    }
+    main .banner h2 {font-size:2.5em;}
+    main .banner ul li {width: 180px; height: 180px;}
+    main .banner ul li .title,
+    main .banner ul li .content {font-size: 0.85em;}
+    /* 뉴 시작 */
+    main .new h2 {padding: 20px 0; font-size: 1.563em;}
+    main .new .new_wrap ul li {height: 500px;}
+    main .new .new_wrap ul li .info  {font-size: 0.875em;}
+    /* 랩 시작 */
+    main .lab h2 {padding: 20px 0; font-size: 1.563em;}
+    main .lab ul li .title {font-size: 0.875em;}
+    main .lab ul {height: 400px;}
+    main .lab ul li .info {height: 364px;}
+    main .lab ul li .info .quality  {font-size: 1.75em;}
+    main .lab ul li .info .desc {font-size: 0.738em;}
+    /* 배너2 시작 */
+    main .banner_two .container {
+        padding: 80px 50px;
+    }
+    main .banner_two .container .abb {font-size: 1.2em;}
+    main .banner_two .container .bnr_title h2 {font-size: 2.5em;}
+    main .banner_two .container .photo div {height: 450px;}
+    main .banner_two .container .bnr_title p {font-size: 1.0em;}
+    /* 카인드 시작 */
+    main .kind h2 {padding: 20px 0; font-size: 1.563em;}
+    main .kind ul {height: 500px;}
+    main .kind ul li {padding: 20px;}
+    main .kind ul li .num {font-size: 12em;}
+    main .kind ul li .bottom .left .type {font-size: 0.85em;}
+    main .kind ul li .bottom .left .advice {font-size: 0.9em;}
+    main .kind ul li .bottom .arrow {width: 20px; height: 20px;}
+    main .kind ul li .bottom .arrow img {width: 100%;}
+    /* 푸터 */
+    footer .announ {padding: 30px 50px;}
+    footer .announ .top .name,
+    footer .announ .top ul li,
+    footer .announ .bottom li {font-size: 0.75em;}
+    footer .info {padding: 10px 10px; gap: 10px;}
+    footer .info p {font-size: 0.5em; letter-spacing: -0.08em;}
 }
