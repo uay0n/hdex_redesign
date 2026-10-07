@@ -49,6 +49,7 @@ header nav .gnb li a {
 header nav .scroll_util li a img {
     padding: 10px 0;
 }
+header nav .scroll_util li:nth-child(4) {display: none;}
 /* ---------------------------------main 시작----------------------------- */
 main {}
 /* ---------------------------------hero 시작----------------------------- */
@@ -910,4 +911,42 @@ footer .info .yout img {}
     footer .announ .bottom li {font-size: 0.75em;}
     footer .info {padding: 10px 10px; gap: 10px;}
     footer .info p {font-size: 0.5em; letter-spacing: -0.08em;}
+}
+/* 모바일 시작 */
+@media screen and (max-width:768px) {
+    header nav {
+        padding: 10px 30px;
+    }
+    header nav .gnb {
+        display: none;
+    }
+    header nav .scroll_util li:nth-child(4) {display: block;}
+    header nav .scroll_util li:nth-child(3) {display: none;}
+    main .hero .folder {
+        height: 874px;
+    }
+    main .hero .folder .folder_body .hero_main {width: 100%;}
+    main .hero .folder .folder_body .hero_main h2 {
+        font-size: 4em;
+        letter-spacing: 2px;
+        padding-bottom: 10px;
+    }
+    main .hero .folder .folder_body .hero_main p {
+        font-size: 1.2em; letter-spacing: 0px;
+    }
+    main .hero .folder .folder_body .btn_num {
+    position: absolute; top:70%; left:50%;
+    }
+    main .hero .folder .folder_body .btn_num a {
+        padding: 10px 10px;
+    }
+    main .hero .folder .folder_body .btn_num a span {
+    font-family: 'Roboto Condensed'; font-weight: 500;
+    font-size: 0.874em; color: #fff; letter-spacing: 2px;
+    }
+    main .hero .folder .folder_body .btn_num a img {width: 15px;}
+    main .hero .folder .folder_body .btn_num p {
+        font-size: 1em;
+    }
+    
 }
